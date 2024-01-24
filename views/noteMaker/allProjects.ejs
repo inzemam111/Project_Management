@@ -1,0 +1,11 @@
+
+  <% layout('layouts/boilerplate') %> 
+
+    <h1>All projects</h1>
+
+    <a href="/projects/new">Add new project</a>
+    <ul>
+        <% for(let project of allProjects) {%> 
+            <li><a href="/projects/<%= project._id %> "><%= project.title %> </a></li>
+        <% } %> 
+    </ul>
